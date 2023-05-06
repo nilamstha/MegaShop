@@ -31,7 +31,7 @@ const Users = mongoose.model("Users", userSchema);
 console.log("connected to database");
 app.use(express.json());
 
-app.get("/", function (req, res) {
+app.get("/", async (req, res) => {
   res.send("Hello world!");
 });
 app.post("/register", async (req, res) => {
