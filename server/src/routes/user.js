@@ -1,5 +1,6 @@
 const express = require('express')
-const addNewUsers = require('../controller/user')
+const addNewUsers = require('../controller/user');
+const { model } = require('mongoose');
 const router = express.Router()
 
 //create
@@ -23,4 +24,4 @@ router.delete("/users/:id", async (req, res) => {
   const data = await Users.findByIdAndDelete(req.params.id);
 });
 
-exports.default = router
+module.exports = router;

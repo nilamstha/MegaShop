@@ -7,4 +7,4 @@ const usersSchema = new mongoose.Schema({
   
   const users = mongoose.model('Users', usersSchema);
  
-  exports.default = users;
+  module.exports = users;
